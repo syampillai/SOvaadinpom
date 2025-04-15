@@ -22,8 +22,8 @@ mvn clean install -Pproduction
 Just use this as the parent POM like:
 ```xml
   <parent>
-    <groupId>com.github.syampillai</groupId>
-    <artifactId>SOvaadinpom</artifactId>
+    <groupId>com.storedobject</groupId>
+    <artifactId>so-vaadinpom</artifactId>
     <version>24.7.1</version>
     <relativePath/>
   </parent>
