@@ -23,17 +23,22 @@
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
     </properties>
 
-    <organization>
-        <name>Syam Pillai</name>
-    </organization>
-
     <licenses>
         <license>
-            <name>Apache 2</name>
+            <name>Apache License, Version 2.0</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <id>syampillai</id>
+            <name>Syam Pillai</name>
+            <email>syam.s.pillai@gmail.com</email>
+            <url>https://github.com/syampillai</url>
+        </developer>
+    </developers>
 
     <repositories>
         <!-- The order of definitions matters. Explicitly defining central here to make sure it has the highest priority. -->
