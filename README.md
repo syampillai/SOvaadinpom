@@ -19,6 +19,12 @@ Just like any other Vaadin project, you can create the production build.
 mvn clean install -Pproduction
 ```
 
+If you are developing a Vaadin add-on, you could build it like this. Make sure that in the assembly folder under your
+project folder, the MANIFEST.MF and assembly.xml files exist for it to work.
+```shell
+mvn clean install -Pdirectory
+```
+
 Just use this as the parent POM like:
 ```xml
   <parent>
