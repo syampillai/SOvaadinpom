@@ -344,7 +344,11 @@
                         <configuration>
                             <source>${java-version}</source>
                             <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
-                            <quiet>true</quiet>
+                            <additionalOptions>
+                                <additionalOption>-protected</additionalOption>
+                                <additionalOption>-Xdoclint:none</additionalOption>
+                            </additionalOptions>
+                            <show>protected</show>
                             <!--
                             <additionalparam>-Xdoclint:none</additionalparam>
                             -->
