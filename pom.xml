@@ -348,6 +348,10 @@
                             <!--
                             <additionalparam>-Xdoclint:none</additionalparam>
                             -->
+                            <sourceFileExcludes>
+                                <!-- No test folder -->
+                                <sourceFileExclude>com/storedobject/test/**</sourceFileExclude>
+                            </sourceFileExcludes>
                         </configuration>
                     </plugin>
                     <plugin>
