@@ -137,9 +137,15 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-core</artifactId>
             <exclusions>
+                <!-- Disable hilla dev -->
                 <exclusion>
                     <groupId>com.vaadin</groupId>
                     <artifactId>hilla-dev</artifactId>
+                </exclusion>
+                <!-- No react router for the front-end -->
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-react</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -206,7 +212,23 @@
             <id>production</id>
 
             <dependencies>
-                <!-- Exclude development dependencies from production -->
+                <!-- Force latest versions to get rid of build warnings -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-lang3</artifactId>
+                    <version>${commons-lang3-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-text</artifactId>
+                    <version>${commons-text-version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                    <version>3.30.2-GA</version>
+                </dependency>
+                <!-- Exclude development dependencies and other unwanted ones from production -->
                 <dependency>
                     <groupId>com.vaadin</groupId>
                     <artifactId>vaadin-core</artifactId>
@@ -214,6 +236,18 @@
                         <exclusion>
                             <groupId>com.vaadin</groupId>
                             <artifactId>vaadin-dev</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>com.vaadin</groupId>
+                            <artifactId>copilot</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>com.vaadin</groupId>
+                            <artifactId>hilla-dev</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>com.vaadin</groupId>
+                            <artifactId>flow-react</artifactId>
                         </exclusion>
                     </exclusions>
                 </dependency>
@@ -232,6 +266,12 @@
                                 <phase>compile</phase>
                             </execution>
                         </executions>
+                        <configuration>
+                            <!-- Disable react router - Not required for flow applications -->
+                            <reactEnable>false</reactEnable>
+                            <!-- Force a custom build -->
+                            <forceProductionBuild>true</forceProductionBuild>
+                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
