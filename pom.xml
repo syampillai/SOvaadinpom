@@ -7,18 +7,18 @@
     <parent>
         <groupId>com.storedobject</groupId>
         <artifactId>so-pom21</artifactId>
-        <version>1.1.7</version>
+        <version>1.1.8</version>
         <relativePath/>
     </parent>
 
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.7.5</version>
+    <version>24.8.3</version>
     <packaging>pom</packaging>
 
     <properties>
-        <vaadin.version>24.7.5</vaadin.version>
-        <jetty.version>12.0.17</jetty.version>
-        <jetty-ee10-maven-plugin-version>12.0.17</jetty-ee10-maven-plugin-version>
+        <vaadin.version>24.8.3</vaadin.version>
+        <jetty.version>12.0.23</jetty.version>
+        <jetty-ee10-maven-plugin-version>12.0.23</jetty-ee10-maven-plugin-version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
     </properties>
@@ -134,12 +134,12 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-fileupload2-javax</artifactId>
-            <version>2.0.0-M2</version>
+            <version>${commons-fileupload2-version}</version>
         </dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.19.1</version>
+            <version>1.21.1</version>
         </dependency>
 
         <!-- Vaadin -->
