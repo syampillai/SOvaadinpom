@@ -152,7 +152,7 @@
                     <groupId>com.vaadin</groupId>
                     <artifactId>hilla-dev</artifactId>
                 </exclusion>
-                <!-- No react router for the front-end -->
+                <!-- No React router for the front-end -->
                 <exclusion>
                     <groupId>com.vaadin</groupId>
                     <artifactId>flow-react</artifactId>
@@ -166,7 +166,7 @@
         <defaultGoal>jetty:run</defaultGoal>
         <plugins>
             <!-- Define newer versions of Java compiler and war plugin to
-                 better support latest JDK versions. -->
+                 better support the latest JDK versions. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
