@@ -7,7 +7,7 @@ All necessary jar file dependencies are included.
 
 The version of this POM file always matches with the supported Vaadin release version.
 
-The Java version is the current LTS version - Java 21.
+The Java version is the current LTS version, Java 21.
 
 It has Jetty integration. So, you can run it from the IDE or from a terminal.
 ```shell
@@ -30,7 +30,7 @@ Just use this as the parent POM like:
   <parent>
     <groupId>com.storedobject</groupId>
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.8.5</version>
+    <version>24.8.6</version>
     <relativePath/>
   </parent>
 ```
