@@ -30,7 +30,7 @@ Just use this as the parent POM like:
   <parent>
     <groupId>com.storedobject</groupId>
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.8.6</version>
+    <version>24.8.7</version>
     <relativePath/>
   </parent>
 ```
