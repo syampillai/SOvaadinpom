@@ -12,11 +12,11 @@
     </parent>
 
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.8.6</version>
+    <version>24.8.7</version>
     <packaging>pom</packaging>
 
     <properties>
-        <vaadin.version>24.8.6</vaadin.version>
+        <vaadin.version>24.8.7</vaadin.version>
         <jetty.version>12.0.23</jetty.version>
         <jetty-ee10-maven-plugin-version>12.0.23</jetty-ee10-maven-plugin-version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -184,7 +184,9 @@
                 <version>${jetty-ee10-maven-plugin-version}</version>
                 <configuration>
                     <scan>2</scan>
+                    <!--
                     <deployMode>FORK</deployMode>
+                    -->
                     <supportedPackagings>
                         <supportedPackaging>war</supportedPackaging>
                         <supportedPackaging>jar</supportedPackaging>
