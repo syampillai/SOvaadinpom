@@ -224,7 +224,7 @@
             <id>production</id>
 
             <dependencies>
-                <!-- Force latest versions to get rid of build warnings -->
+                <!-- Force the latest versions to get rid of build warnings -->
                 <dependency>
                     <groupId>org.apache.commons</groupId>
                     <artifactId>commons-lang3</artifactId>
