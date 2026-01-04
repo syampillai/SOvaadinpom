@@ -30,16 +30,7 @@ Just use this as the parent POM like:
   <parent>
     <groupId>com.storedobject</groupId>
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.8.7</version>
+    <version>24.9.8</version>
     <relativePath/>
   </parent>
-```
-Also, include this in your repositories section:
-```xml
-<repositories>
-    <repository>
-        <id>so-maven</id>
-        <url>https://storedobject.com/maven</url>
-    </repository>
-</repositories>
 ```
