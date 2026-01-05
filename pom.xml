@@ -123,6 +123,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-core</artifactId>
+            <version>${vaadin.version}</version>
             <exclusions>
                 <!-- Disable hilla dev -->
                 <exclusion>
@@ -141,6 +142,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-dev</artifactId>
+            <version>${vaadin.version}</version>
             <optional>true</optional>
         </dependency>
 
