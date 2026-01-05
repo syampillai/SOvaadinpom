@@ -7,17 +7,18 @@
     <parent>
         <groupId>com.storedobject</groupId>
         <artifactId>so-pom21</artifactId>
-        <version>1.1.12</version>
+        <version>1.1.13</version>
         <relativePath/>
     </parent>
 
+    <groupId>com.storedobject</groupId>
     <artifactId>so-vaadinpom</artifactId>
-    <version>24.9.8</version>
+    <version>25.0.2</version>
     <packaging>pom</packaging>
 
     <properties>
         <so-name>SOvaadinpom</so-name>
-        <vaadin.version>24.9.8</vaadin.version>
+        <vaadin.version>25.0.2</vaadin.version>
         <jetty.version>12.1.5</jetty.version>
         <jetty-ee10-maven-plugin-version>12.1.5</jetty-ee10-maven-plugin-version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -25,7 +26,7 @@
     </properties>
 
     <name>SO Vaadin POM</name>
-    <description>SO Vaadin POM for Vaadin 24.x versions</description>
+    <description>SO Vaadin POM for Vaadin 25+ versions</description>
     <url>https://github.com/syampillai/${so-name}</url>
 
     <scm>
@@ -118,34 +119,6 @@
 
     <dependencies>
 
-        <!-- Forcing the latest versions -->
-        <!-- apache -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
-            <version>${commons-compress-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-fileupload2-javax</artifactId>
-            <version>${commons-fileupload2-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.21.1</version>
-        </dependency>
-
         <!-- Vaadin -->
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -162,6 +135,13 @@
                     <artifactId>flow-react</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- Vaadin Dev -->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-dev</artifactId>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>
@@ -228,22 +208,6 @@
             <id>production</id>
 
             <dependencies>
-                <!-- Force the latest versions to get rid of build warnings -->
-                <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-lang3</artifactId>
-                    <version>${commons-lang3-version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>commons-text</artifactId>
-                    <version>${commons-text-version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.javassist</groupId>
-                    <artifactId>javassist</artifactId>
-                    <version>3.30.2-GA</version>
-                </dependency>
                 <!-- Exclude development dependencies and other unwanted ones from production -->
                 <dependency>
                     <groupId>com.vaadin</groupId>
